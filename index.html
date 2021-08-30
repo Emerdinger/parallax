@@ -62,16 +62,18 @@
     window.addEventListener('scroll', function(){
         let value = window.scrollY;
 
-        text.style.top = 38 + value * -0.2 + '%';
-        bird1.style.top = value * -0.5 + 'px'
-        bird1.style.left = value * 1 + 'px'
-        bird2.style.top = value * -0.5 + 'px'
-        bird2.style.left = value * -2 + 'px'
-        btn.style.marginTop = value * 0.5 + 'px';
-        rocks.style.top = value * -0.12 + 'px';
-        forest.style.top = value * 0.25 + 'px';
-        header.style.top = value * 0.5 + 'px';
-        water.style.top = value * 0.001 + 'px';
+        if (window.screen.width >= 600) {
+            text.style.top = 38 + value * -0.2 + '%';
+            bird1.style.top = value * -0.5 + 'px'
+            bird1.style.left = value * 0.8 + 'px'
+            bird2.style.top = value * -0.5 + 'px'
+            bird2.style.left = value * -2 + 'px'
+            btn.style.marginTop = value * 0.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+            water.style.top = value * 0.001 + 'px';
+        }
     })
 </script>
 </body>
