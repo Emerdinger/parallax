@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <title>Parallax</title>
+</head>
+<body>
+<header id="header">
+    <a href="#" class="logo">Emer</a>
+    <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#">Acerca</a></li>
+        <li><a href="#">Destinos</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</header>
+<section>
+    <h2 id="text"><span>Es hora de una nueva</span><br>Aventura</h2>
+    <img src="./img/bird1.png" id="bird1" alt="">
+    <img src="./img/bird2.png" id="bird2" alt="">
+    <img src="./img/forest.png" id="forest" alt="">
+    <a href="#sec" id="btn">Explorar</a>
+    <img src="./img/rocks.png" id="rocks" alt="">
+    <img src="./img/water.png" id="water" alt="">
+</section>
+<div class="sec" id="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur, dicta doloribus fugit itaque laboriosam nobis, odio porro
+        praesentium qui quia, rem vitae voluptatibus. Adipisci atque error magni necessitatibus possimus?</span><span>Adipisci architecto corporis
+        dicta eum fugit inventore nisi nulla odit, officiis possimus quaerat quasi quod recusandae repellat, repellendus reprehenderit saepe tempore.
+        Ea esse id iure odio, pariatur porro possimus qui?</span><span>Adipisci dignissimos dolor eligendi, est facere illum iste maxime nulla officiis
+        porro quam quasi qui repellendus sit voluptatem! Adipisci aliquam amet blanditiis deleniti dicta, dolorum eligendi quam quis tenetur voluptates.</span>
+        <span>Dolor ea laudantium nulla quaerat rerum soluta voluptate! Assumenda corporis deleniti dolor fuga, impedit ipsum iure maxime nemo non obcaecati
+            odio officiis, praesentium quod repellat sed similique ullam unde, voluptates?</span><span>Dolorem, modi repellat. Adipisci architecto doloremque
+            dolores ea eaque eius et ex explicabo fuga fugit, in laboriosam laborum minima natus nostrum perferendis praesentium quaerat quasi vitae voluptas.
+            Cum, illum nulla!</span><span>Aperiam ducimus, facere laborum libero odio provident quas tempore! Impedit, quasi rem. Ad assumenda blanditiis
+            commodi dolorum eius esse explicabo fugit laudantium magnam minima molestiae mollitia numquam, pariatur quae sed.</span><span>Aperiam beatae
+            consequuntur cumque deserunt, dicta, ducimus eveniet excepturi fuga fugiat inventore iste laboriosam laborum molestias nemo optio perspiciatis
+            porro quia quis rem repellendus suscipit vero vitae voluptatem? At, beatae?</span><span>Ad aperiam, assumenda delectus deserunt facere ipsa iure
+            laudantium magnam molestiae nam neque nisi officiis praesentium, recusandae sit! Delectus dicta dolore dolorum eveniet illum incidunt magnam
+            possimus quas voluptas voluptatibus?</span><span>Autem est, fugit neque quibusdam sequi voluptates voluptatum. Animi architecto corporis debitis
+            dolore dolorum eos iusto, non nostrum obcaecati odit quaerat quidem quo quos reprehenderit suscipit totam, ullam. Delectus, necessitatibus.</span>
+        <span>Fugiat nam suscipit voluptatibus. A at commodi culpa cumque dolorem et explicabo, fuga hic illo illum labore magnam, officia pariatur possimus
+            repellendus, soluta suscipit voluptates? At facere fugiat nostrum quo.</span><span>Accusamus ad aliquam blanditiis commodi consectetur dicta
+            doloremque eaque eligendi inventore laboriosam laborum laudantium natus nesciunt nisi non nulla optio pariatur perspiciatis quia, quibusdam
+            quisquam ratione sapiente tempora, veritatis voluptate.</span><span>Aliquid aperiam architecto dignissimos dolor earum, enim hic impedit ipsam
+            iste iure laborum magni mollitia nam nulla perferendis perspiciatis possimus praesentium provident rem saepe sapiente sit tempore temporibus ullam
+            ut!</span></p>
+</div>
+
+<script>
+    let text = document.getElementById("text");
+    let bird1 = document.getElementById("bird1");
+    let bird2 = document.getElementById("bird2");
+    let btn = document.getElementById("btn");
+    let rocks = document.getElementById("rocks");
+    let forest = document.getElementById("forest");
+    let water = document.getElementById("water");
+    let header = document.getElementById("header");
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+
+        text.style.top = 38 + value * -0.2 + '%';
+        bird1.style.top = value * -0.5 + 'px'
+        bird1.style.left = value * 1 + 'px'
+        bird2.style.top = value * -0.5 + 'px'
+        bird2.style.left = value * -2 + 'px'
+        btn.style.marginTop = value * 0.5 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.25 + 'px';
+        header.style.top = value * 0.5 + 'px';
+        water.style.top = value * 0.001 + 'px';
+    })
+</script>
+</body>
+</html>
